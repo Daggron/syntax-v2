@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #282c35;
   /* #8c5dff */
   font-family: 'Rubik', sans-serif;
 }
@@ -20,11 +20,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #444;
+  color: rgb(255, 100, 177);
 }
 
 p {
-  color: #646464;
+  color: #fcfcfc;
 }
 
 a {
@@ -43,6 +43,10 @@ a {
 
 .p8 {
   padding: 8px;
+}
+
+.p16 {
+  padding: 16px;
 }
 
 .heading {
@@ -73,4 +77,8 @@ a {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.pink {
+  color: #f09ae9;
 }

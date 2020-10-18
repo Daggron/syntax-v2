@@ -9,6 +9,13 @@ export default function useBlogMeta() {
             title
             slug
             author
+            image {
+              sharp: childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
           }
           excerpt
         }

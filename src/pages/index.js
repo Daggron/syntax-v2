@@ -15,7 +15,7 @@ export default function Index() {
       </div>
       <div className="flex space-between align-center flex-wrap">
         {
-          [...blogs, ...blogs].map(eachBlog => (
+          [...blogs, ...blogs, ...blogs].map(eachBlog => (
             <div className="p8" key={eachBlog.frontmatter.slug}>
               <BlogCards post={eachBlog}/>
             </div>
