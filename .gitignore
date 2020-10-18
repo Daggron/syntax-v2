@@ -1,0 +1,12 @@
+# node_modules
+/node_modules
+
+# gatsby cache
+.cache
+
+# public folder
+
+/public
+
+# error log file
+yarn-error.log
