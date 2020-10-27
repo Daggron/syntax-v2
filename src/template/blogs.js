@@ -1,10 +1,10 @@
 import { graphql } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Heading from '../components/Heading/Heading';
 import Layout from '../components/Layout/Layout';
-
-import style from './blogs.module.css';
 
 export const data = graphql`
   query ($slug: String!) {
@@ -38,13 +38,16 @@ export default function blogs({ data: {mdx: post} }) {
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" url={`https://syntax.dev/${post.frontmatter.slug}`}/>
       </Helmet>
+      <div className="mb16">
+        <Heading />
+      </div>
       <div>
-        <h1>
+        <h1 className="mb8">
           { post.frontmatter.title }
         </h1>
-        <div className={style['img']}>
-          <GatsbyImage fluid={post.frontmatter.image.sharp.fluid} className={style['img']} />
-        </div>
+        <MDXRenderer>
+          { post.body }
+        </MDXRenderer>
       </div>
     </Layout>
   )

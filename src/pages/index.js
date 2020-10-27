@@ -3,16 +3,13 @@ import BlogCards from '../components/BlogCards/BlogCards';
 import Layout from '../components/Layout/Layout';
 import useBlogMeta from '../hooks/useBlogsMeta';
 import '../global.css';
+import Heading from '../components/Heading/Heading';
 
 export default function Index() {
   const blogs = useBlogMeta();
   return (
     <Layout>
-      <div className="heading">
-        <h1 className="heading-title mb16">
-          Syntax
-        </h1>
-      </div>
+      <Heading />
       <div className="flex space-between align-center flex-wrap">
         {
           [...blogs, ...blogs, ...blogs].map(eachBlog => (

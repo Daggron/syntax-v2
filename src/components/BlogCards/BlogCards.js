@@ -20,6 +20,9 @@ export default function BlogCards({ post }) {
             <p className="mb8">
               { post.excerpt.slice(0, 100) } ...
             </p>
+            <p className={style['link']}>
+              Read More <span className={style['linkarrow']}>&rarr;</span>
+            </p>
           </div>
         </div>
       </Link>

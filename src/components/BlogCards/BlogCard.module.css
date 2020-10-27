@@ -10,6 +10,24 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
   transition: 500ms;
+  transform: scale(1.1);
+}
+
+.link {
+  color: #ffe05d;
+}
+
+.card:hover .linkarrow {
+  animation: moveright 1s infinite ease-in-out;
+}
+
+@keyframes moveright {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 24px;
+  }
 }

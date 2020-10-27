@@ -1,5 +1,11 @@
 .layout {
-  max-width: 90vw;
   width: 70vw;
+  max-width: 90vw;
   margin: 1rem auto;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    width: 90vw;
+  }
 }
